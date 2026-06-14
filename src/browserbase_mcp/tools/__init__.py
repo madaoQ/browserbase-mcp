@@ -11,7 +11,7 @@ Modules:
 
 from __future__ import annotations
 
-from browserbase.tools.sessions import session_tools
+from browserbase_mcp.tools.sessions import session_tools
 
 browserbase_tools = [
     *session_tools,

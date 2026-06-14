@@ -9,7 +9,7 @@ Credentials provided by clients at runtime via DAuth token exchange.
 
 from __future__ import annotations
 
-from browserbase.config import create_browserbase_connection
-from browserbase.tools import browserbase_tools
+from browserbase_mcp.config import create_browserbase_connection
+from browserbase_mcp.tools import browserbase_tools
 
 __all__ = ["create_browserbase_connection", "browserbase_tools"]

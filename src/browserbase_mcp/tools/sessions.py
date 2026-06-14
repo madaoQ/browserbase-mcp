@@ -8,15 +8,15 @@ from __future__ import annotations
 from dedalus_mcp import HttpMethod, tool
 from dedalus_mcp.types import ToolAnnotations
 
-from browserbase.guards import (
+from browserbase_mcp.guards import (
     validate_browser,
     validate_limit,
     validate_offset,
     validate_project_id,
     validate_session_id,
 )
-from browserbase.request import _bool, _int, _opt_str, request
-from browserbase.types import JSONObject
+from browserbase_mcp.request import _bool, _int, _opt_str, request
+from browserbase_mcp.types import JSONObject
 
 
 @tool(

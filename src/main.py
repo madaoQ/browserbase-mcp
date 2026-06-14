@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 from dedalus_mcp import MCPServer
 from dedalus_mcp.server import TransportSecuritySettings
 
-from browserbase import create_browserbase_connection, browserbase_tools
+from browserbase_mcp import create_browserbase_connection, browserbase_tools
 
 load_dotenv()
 
