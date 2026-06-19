@@ -7,11 +7,13 @@ from __future__ import annotations
 
 from typing import Any, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
-class SessionInfo(BaseModel, frozen=True, slots=True):
+class SessionInfo(BaseModel):
     """Browser session info."""
+    model_config = _FROZEN_SLOT
+
 
     id: str | None = None
     status: str | None = None
@@ -22,30 +24,38 @@ class SessionInfo(BaseModel, frozen=True, slots=True):
     created_at: str | None = None
 
 
-class SessionList(BaseModel, frozen=True, slots=True):
+class SessionList(BaseModel):
     """List of sessions."""
+    model_config = _FROZEN_SLOT
+
 
     sessions: list[SessionInfo] = Field(default_factory=list)
     total: int | None = None
 
 
-class RecordingInfo(BaseModel, frozen=True, slots=True):
+class RecordingInfo(BaseModel):
     """Session recording info."""
+    model_config = _FROZEN_SLOT
+
 
     url: str | None = None
     duration: int | None = None
 
 
-class LogEntry(BaseModel, frozen=True, slots=True):
+class LogEntry(BaseModel):
     """Single log entry."""
+    model_config = _FROZEN_SLOT
+
 
     timestamp: str | None = None
     level: str | None = None
     message: str | None = None
 
 
-class LogsResponse(BaseModel, frozen=True, slots=True):
+class LogsResponse(BaseModel):
     """Session logs response."""
+    model_config = _FROZEN_SLOT
+
 
     logs: list[LogEntry] = Field(default_factory=list)
 
